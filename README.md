@@ -2,6 +2,13 @@
 
 在 VS Code 中浏览 V2EX 帖子，假装写代码，实则摸鱼。
 
+# 效果展示
+_工作台_
+![工作台](./images/workbench.png)
+_帖子列表_
+![帖子列表](./images/content_list.png)
+
+
 ## 功能特性
 
 - 🌐 浏览 V2EX 热门帖子和最新帖子
