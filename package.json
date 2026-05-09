@@ -1,0 +1,66 @@
+{
+  "name": "v2ex-fish",
+  "displayName": "V2EX Fish",
+  "description": "Browse V2EX posts in VS Code, pretend to code while actually slacking off",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:v2ex-fish.showPosts",
+    "onCommand:v2ex-fish.refreshPosts",
+    "onView:v2exPosts"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "v2ex-fish.showPosts",
+        "title": "V2EX Fish: Browse Posts"
+      },
+      {
+        "command": "v2ex-fish.refreshPosts",
+        "title": "V2EX Fish: Refresh Posts"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "v2ex-fish",
+          "title": "V2EX Fish",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "v2ex-fish": [
+        {
+          "id": "v2exPosts",
+          "name": "Hot Posts"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
