@@ -3,6 +3,10 @@
   "displayName": "V2EX Fish",
   "description": "Browse V2EX posts in VS Code, pretend to code while actually slacking off",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Crecendow/v2ex_plgins.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -39,7 +43,14 @@
       "v2ex-fish": [
         {
           "id": "v2exPosts",
-          "name": "Hot Posts"
+          "name": "Hot Posts",
+          "actions": [
+            {
+              "command": "v2ex-fish.refreshPosts",
+              "icon": "$(refresh)",
+              "tooltip": "Refresh Posts"
+            }
+          ]
         }
       ]
     }
